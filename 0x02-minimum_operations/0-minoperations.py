@@ -21,14 +21,12 @@ def minOperations(n):
 
     if n <= 1:
         return 0
-    
+
     while n > 1:
-        while n % n_factor == 0: # check if n is factorisable.
+        while n % n_factor == 0:  # check if n is factorisable.
             num_of_operation += n_factor
             n = n // n_factor
-        
+
         n_factor += 1
 
     return num_of_operation
-
-    
