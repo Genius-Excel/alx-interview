@@ -26,6 +26,8 @@ def makeChange(coins, total):
 
     coin_piles[0] = 0
 
+    coins.sort()
+
     for coin in coins:
         for x in range(coin, total + 1):
             coin_piles[x] = min(coin_piles[x], coin_piles[x - coin] + 1)
