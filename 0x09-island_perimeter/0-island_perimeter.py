@@ -23,11 +23,15 @@ def island_perimeter(grid):
         for j in range(grid_col):
             # check for a matrix value of 1.
             if grid[i][j] == 1:
-                grid_perimeter += 4
+                if i == 0 or grid[i - 1][j] == 0:
+                    grid_perimeter += 1
+                if i == grid_row - 1 or grid[i + 1][j] == 0:
+                    grid_perimeter += 1
 
-                if i > 0 and grid[i - 1][j] == 1:
-                    grid_perimeter -= 2
-                if i > 0 and grid[i][j - 1] == 1:
-                    grid_perimeter -= 2
+                if j == 0 or grid[i][j - 1] == 0:
+                    grid_perimeter += 1
+
+                if j == grid_col - 1 or grid[i][j + 1] == 0:
+                    grid_perimeter += 1
 
     return grid_perimeter
