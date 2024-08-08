@@ -29,7 +29,7 @@ def count_primes(n):
     """
         This function counts the lenght of primes lists of n.
         Args:
-            n (list of ints): represents the list of primes
+            n (list of int): represents the list of primes
         Returns:
             The length of prime lists of n.
     """
@@ -40,6 +40,16 @@ def count_primes(n):
 
 
 def isWinner(x, nums):
+    """
+        This function computes the winner of a prime
+        number picking game.
+        Args:
+            x (int): represents the number of rounds played.
+            nums: represents selected numbers
+        Returns:
+            The winner of the game, if score equals then None.S
+    """
+
     if x == 0 or not nums:
         return None
 
