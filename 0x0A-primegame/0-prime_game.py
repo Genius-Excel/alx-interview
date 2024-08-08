@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+"""
+    This module contains algorithm functions that computes
+    winner of a prime number picking game.
+"""
+
+
 def seive(n):
     """
     This function computes the prime numbers up to n
